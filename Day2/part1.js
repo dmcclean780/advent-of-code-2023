@@ -77,7 +77,38 @@ function checkValid(colours){
   console.log(sum);
 }
 
+function findPower(colours){
+  var powers=0
+  var maxRed=0
+  var maxBlue=0
+  var maxGreen=0
+  var thisPower=0
+  for(var i=0; i<colours.length; i++){
+    for(var j=0; j<colours[i].length; j++){
+        if(Number(colours[i][j][0])>maxRed){
+          maxRed=colours[i][j][0];
+        }
+        if(Number(colours[i][j][1])>maxBlue){
+          maxBlue=colours[i][j][1];
+        }
+        if(Number(colours[i][j][2])>maxGreen){
+          maxGreen=colours[i][j][2]
+        }
+    }
+    console.log("red:", maxRed);
+    console.log("blue:", maxBlue);
+    console.log("green:", maxGreen);
+    thisPower=maxRed*maxBlue*maxGreen;
+    console.log("power:", thisPower);
+    powers+=thisPower;
+    var maxRed=0
+    var maxBlue=0
+    var maxGreen=0
+  }
+  console.log(powers);
+}
+
 input=trimInput(input);
 input=splitInput(input);
 var colours=getColourNumbers(input);
-checkValid(colours);
+findPower(colours);
