@@ -30,7 +30,6 @@ function findWinning(inputData){
                     matches++
                 }
             }
-            console.log(matches);
             for(var k=0;k<matches; k++){
                 cardAmounts[i+k+1]+=1*cardAmounts[i];
             }
