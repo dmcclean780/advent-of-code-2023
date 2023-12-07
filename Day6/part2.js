@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const { maxHeaderSize } = require('node:http');
 var input
 try {
-  const data = fs.readFileSync('/home/daniel/Documents/advent-of-code-2023/advent-of-code-2023/Day6/input.txt', 'utf8');
+  const data = fs.readFileSync('./input.txt', 'utf8');
   input=data.split("\n");
 } catch (err) {
   console.error(err);
